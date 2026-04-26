@@ -8,7 +8,8 @@ let items = [
     date: "2024-07-15",
     location: "Central Park, NY",
     category: "Festival",
-    capacity: "5000"
+    capacity: "5000",
+    image: "https://images.unsplash.com/photo-1507874457470-272b3c8d8ee2"
   },
   {
     id: 2,
@@ -19,7 +20,8 @@ let items = [
     date: "2024-08-20",
     location: "Convention Center, SF",
     category: "Conference",
-    capacity: "1000"
+    capacity: "1000",
+    image: "https://images.unsplash.com/photo-1551836022-d5d88e9218df"
   },
   {
     id: 3,
@@ -30,7 +32,8 @@ let items = [
     date: "2024-06-10",
     location: "Blue Note, NYC",
     category: "Concert",
-    capacity: "200"
+    capacity: "200",
+    image: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4"
   },
   {
     id: 4,
@@ -41,7 +44,8 @@ let items = [
     date: "2024-06-25",
     location: "Art Studio, Chicago",
     category: "Workshop",
-    capacity: "30"
+    capacity: "30",
+    image: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee"
   },
   {
     id: 5,
@@ -52,7 +56,8 @@ let items = [
     date: "2024-07-05",
     location: "Expo Center, Miami",
     category: "Festival",
-    capacity: "2000"
+    capacity: "2000",
+    image: "https://images.unsplash.com/photo-1498579809087-ef1e558fd1da"
   },
   {
     id: 6,
@@ -63,7 +68,8 @@ let items = [
     date: "2024-09-01",
     location: "Downtown, Boston",
     category: "Sports",
-    capacity: "10000"
+    capacity: "10000",
+    image: "https://images.unsplash.com/photo-1552674605-db6ffd4facb5"
   }
 ];
 

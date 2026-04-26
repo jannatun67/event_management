@@ -4,6 +4,7 @@ import { useMemo } from 'react';
 import { useParams, useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { getItems } from '@/lib/items';
+import Image from 'next/image';
 
 export default function ItemDetailsPage() {
   const params = useParams();
@@ -44,7 +45,12 @@ export default function ItemDetailsPage() {
         </button>
 
         <div className="bg-white rounded-xl shadow-lg overflow-hidden">
-          <div className="h-96 bg-linear-to-br from-indigo-400 to-purple-400"></div>
+         <div className="h-96 "> 
+                <Image src={item.image} alt={item.title} className="w-full h-full object-cover" 
+                width={300}
+                height={200}
+                />
+              </div>
           
           <div className="p-8">
             <div className="flex justify-between items-start mb-4">

@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { getItems } from '@/lib/items';
+import Image from 'next/image';
 
 export default function UpcomingEvents() {
   const events = getItems().slice(0, 3);
@@ -19,7 +20,12 @@ export default function UpcomingEvents() {
               key={event.id}
               className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
             >
-              <div className="h-48 bg-linear-to-br from-indigo-400 to-purple-400"></div>
+              <div className="h-48 "> 
+                <Image src={event.image} alt={event.title} className="w-full h-full object-cover" 
+                width={300}
+                height={200}
+                />
+              </div>
               <div className="p-6">
                 <div className="flex justify-between items-start mb-2">
                   <h3 className="text-xl font-semibold text-gray-900">{event.title}</h3>

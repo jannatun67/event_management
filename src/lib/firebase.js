@@ -1,6 +1,7 @@
 import { initializeApp, getApps, getApp } from 'firebase/app';
 import { getAuth } from 'firebase/auth';
 import { getFirestore } from 'firebase/firestore';
+import { getAnalytics } from 'firebase/analytics';
 
 const firebaseConfig = {
   apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
@@ -11,9 +12,25 @@ const firebaseConfig = {
   appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
 };
 
-// Initialize Firebase
-const app = !getApps().length ? initializeApp(firebaseConfig) : getApp();
-const auth = getAuth(app);
-const db = getFirestore(app);
+const hasAllKeys = Object.values(firebaseConfig).every((value) => !!value);
 
-export { app, auth, db };
+if (!hasAllKeys) {
+  console.warn('Firebase config is incomplete. Firebase features will be disabled.');
+}
+
+// Initialize Firebase
+let app = null;
+let auth = null;
+let db = null;
+let analytics = null;
+
+if (hasAllKeys && typeof window !== 'undefined') {
+  app = !getApps().length ? initializeApp(firebaseConfig) : getApp();
+  auth = getAuth(app);
+  db = getFirestore(app);
+  if (typeof window !== 'undefined') {
+    analytics = getAnalytics(app);
+  }
+}
+
+export { app, auth, db, analytics };

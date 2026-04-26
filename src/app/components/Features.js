@@ -1,22 +1,29 @@
+import { FaCalendarCheck, FaHeadset, FaTags, FaTicketAlt } from "react-icons/fa";
+
 export default function Features() {
-  const features = [
-    {
-      title: 'Curated Events',
-      description: 'Hand-picked events from the best organizers worldwide.',
-    },
-    {
-      title: 'Easy Booking',
-      description: 'Book tickets in seconds with our streamlined process.',
-    },
-    {
-      title: 'Best Prices',
-      description: 'Get the best deals and early bird discounts.',
-    },
-    {
-      title: '24/7 Support',
-      description: 'Our team is always here to help you.',
-    },
-  ];
+ const features = [
+  {
+    title: 'Curated Events',
+    description: 'Hand-picked events from the best organizers worldwide.',
+    icon: FaCalendarCheck,
+  },
+  {
+    title: 'Easy Booking',
+    description: 'Book tickets in seconds with our streamlined process.',
+    icon: FaTicketAlt,
+  },
+  {
+    title: 'Best Prices',
+    description: 'Get the best deals and early bird discounts.',
+    icon: FaTags,
+  },
+  {
+    title: '24/7 Support',
+    description: 'Our team is always here to help you.',
+    icon: FaHeadset,
+  },
+];
+
 
   return (
     <div className="py-16 bg-gray-50">
@@ -34,7 +41,7 @@ export default function Features() {
               className="bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
             >
               <div className="w-12 h-12 bg-indigo-100 rounded-lg flex items-center justify-center mb-4">
-                <div className="w-6 h-6 bg-indigo-600 rounded"></div>
+                <feature.icon className="w-6 h-6 text-indigo-600" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-2">{feature.title}</h3>
               <p className="text-gray-600">{feature.description}</p>

@@ -1,22 +1,26 @@
-export default function Testimonials() {
-  const testimonials = [
-    {
-      name: 'Sarah Johnson',
-      role: 'Event Organizer',
-      content: 'EventHub has transformed how I manage and promote my events. The platform is incredible!',
-    },
-    {
-      name: 'Michael Chen',
-      role: 'Attendee',
-      content: 'I discovered so many amazing events through EventHub. The booking process is seamless.',
-    },
-    {
-      name: 'Emma Davis',
-      role: 'Venue Owner',
-      content: 'Partnering with EventHub has increased our venue bookings significantly.',
-    },
-  ];
+import Image from "next/image";
 
+export default function Testimonials() {
+ const testimonials = [
+  {
+    name: 'Sarah Johnson',
+    role: 'Event Organizer',
+    content: 'EventHub has transformed how I manage and promote my events. The platform is incredible!',
+    image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330'
+  },
+  {
+    name: 'Michael Chen',
+    role: 'Attendee',
+    content: 'I discovered so many amazing events through EventHub. The booking process is seamless.',
+    image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e'
+  },
+  {
+    name: 'Emma Davis',
+    role: 'Venue Owner',
+    content: 'Partnering with EventHub has increased our venue bookings significantly.',
+    image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80'
+  },
+];
   return (
     <div className="py-16 bg-indigo-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -32,7 +36,9 @@ export default function Testimonials() {
             >
               <div className="flex items-center mb-4">
                 <div className="w-12 h-12 bg-indigo-100 rounded-full flex items-center justify-center mr-4">
-                  <div className="w-6 h-6 bg-indigo-600 rounded-full"></div>
+                  <div className="w-12 h-12 rounded-full">
+                    <Image src={testimonial.image} alt={testimonial.name} className="w-full h-full object-cover rounded-full" width={48} height={48} />
+                  </div>
                 </div>
                 <div>
                   <h4 className="font-semibold text-gray-900">{testimonial.name}</h4>
