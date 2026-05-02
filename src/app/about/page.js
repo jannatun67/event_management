@@ -14,6 +14,7 @@ export default function AboutPage() {
             {/* Overlay */}
             <div className="absolute inset-0 bg-black/50"></div>
           </div>
+          
 
           <div className="p-8">
             <h1 className="text-4xl font-bold text-gray-900 mb-4">
